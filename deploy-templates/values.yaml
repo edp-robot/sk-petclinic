@@ -23,7 +23,9 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations: {}
+podAnnotations:
+  # enable otel instrumentation
+  instrumentation.opentelemetry.io/inject-java: observability/general
 
 podSecurityContext: {}
   # fsGroup: 2000
